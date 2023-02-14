@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background: #0c111b;
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+}
+
+/* Left Hand Side Container */
+/* Navigation Menu */
+.navbar {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    padding: 0 4%;
+    background: #0c111b;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+/* Disney Logo */
+.brand-logo {
+    height: 80px;
+}
+
+.nav-links {
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+}
+
+.nav-items a {
+    text-decoration: none;
+    margin-left: 20px;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+}
+
+/* Right-Hand Side Container */
+
+.right-container {
+    margin-left: auto;
+    display: block;
+}
+
+/* Search Box */
+.search-box {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #fff;
+    text-transform: capitalize;
+    width: 250px;
+    font-size: 16px;
+    font: 600;
+    transition: 0.50s;
+}
+
+.search-box:focus {
+    width: 400px;
+    border-color: #1f80e0;
+}
+
+/* Subscribe Button */
+.sub-btn {
+    padding: 2px 2px;
+    height: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: #1f80e0;
+    color: #fff;
+    font-weight: 750;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+/* Login Button */
+.login-link {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 7px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* caraosel slider */
+.caraosel-slider {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    padding: 20px 0;
+    overflow-x: hidden;
+    margin-top: 80px;
+}
+
+.caraosel {
+    display: flex;
+    width: 92%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slider {
+    flex: 0 0 auto;
+    margin-right: 30px;
+    position: relative;
+    background: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    left: 0;
+    overflow: hidden;
+}
+
+/* caraosel Movie Poster Image */
+.slider img {
+    min-height: 100%;
+    width: 70%;
+    object-fit: cover;
+    margin-left: auto;
+    display: block;
+}
+
+/* caraosel Movie content like movie title and description */
+
+.slider-content {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, #030b17 80%, #0c111b00);
+    color: #fff;
+}
+
+/* caraosel movie title */
+.movie-title {
+    padding-left: 50px;
+    text-transform: capitalize;
+    margin-top: 80px;
+    font-size: 40px;
+}
+
+.movie-des {
+    width: 80%;
+    line-height: 30px;
+    padding-left: 50px;
+    margin-top: 30px;
+    opacity: 0.8;
+    font-size: 16px;
+}
+
+.video-card-container {
+    width: 92%;
+    position: relative;
+    margin: auto;
+    height: 10vw;
+    display: flex;
+    ;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.video-card {
+    position: relative;
+    min-width: calc(100%/5 - 10px);
+    width: calc(100%/5 - 10px);
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #030b17;
+}
+
+.video-card-image,
+.card-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-video {
+    position: absolute;
+}
+
+.video-card:hover .video-card-image {
+    display: none;
+}
+/* Recommendation Content Starts here*/
+.title {
+    color: #fff;
+    opacity: 0.9;
+    /* padding-left: 4%; */
+    padding: 20px 4%;
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.movies-list {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin: 10px 0 20px;
+}
+
+.card-container {
+    position: relative;
+    width: 92%;
+    padding-left: 60px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+}
+
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    position: relative;
+    min-width: 150px;
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card:hover .card-body {
+    opacity: 1;
+}
+
+.card-body {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(4, 8, 15) , #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.name {
+    color: #fff;
+    font: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 40%;
+}
+
+.desc {
+    color: #fff;
+    opacity: 0.8;
+    margin: 5px 0;
+    font-weight: 500;
+    font: 12px;
+}
+.watchlist-btn{
+    position: relative;
+    text-transform: capitalize;
+    background: none;
+    border: none;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 10px 27px;
+    border-radius: 5px;
+}
+.watchlist-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5px;
+    height: 35px;
+    width: 35px;
+    background-image: url(images/add.png);
+    background-size: cover;
+    transform: scale(0.4);
+}
+
+.watchlist-btn:hover{
+    color: #fff;
+    background: rgba(255, 255, 255,0.1);
+}
+
+.pre-btn, .nxt-btn{
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 5%;
+    border: none;
+    cursor: pointer;
+    top: 0;
+    outline: none;
+}
+.pre-btn{
+    left: 0;
+    background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+}
+.nxt-btn{
+    right: 0;
+    background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+}
+.pre-btn img, .nxt-btn img{
+    width: 15px;
+    height: 20px;
+    opacity: 0;
+}
+.pre-btn:hover img,
+.nxt-btn:hover img{
+    opacity: 1;
+}
